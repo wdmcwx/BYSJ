@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:paddingTop="10px">
+
+       <EditText 
+	          android:id="@+id/search"
+	          android:layout_width="290sp"
+	          android:layout_height="wrap_content"
+	          android:background="#ffffff"
+	          android:layout_gravity="center_horizontal"
+	          android:hint="搜索景点~~~" />
+       <LinearLayout 
+	      android:layout_width="match_parent"
+	      android:layout_height="270px"	   
+	      android:gravity="center_horizontal"
+	      android:paddingTop="10px"
+	      android:orientation="vertical">
+	      
+	       <ViewFlipper
+	         android:layout_width="fill_parent"
+	         android:layout_height="150dp"
+	         android:id="@+id/details" >
+        
+    	    </ViewFlipper>
+		    <RelativeLayout
+		       android:layout_width="fill_parent"
+		       android:layout_height="16dp" >
+		           <TextView
+		               android:id="@+id/title"
+		               android:layout_width="wrap_content"
+		               android:layout_height="wrap_content"           
+		               android:gravity="center"
+		               android:text="hello"           
+		               />
+		    </RelativeLayout>
+  	   </LinearLayout>
+  	   <LinearLayout android:id="@+id/jingdian_luxian"
+  	       android:layout_width="match_parent" 
+  	       android:layout_height="wrap_content"
+  	       android:orientation="horizontal"
+  	       android:padding="6dp">
+  	       <TextView android:id="@+id/jingdian"
+  	           android:layout_width="0dp"
+  	           android:layout_weight="1"
+  	           android:layout_height="150dp"
+  	           android:background="#BA55D3"
+  	           android:layout_marginRight="5dp"
+  	           android:text="景点"
+  	           android:gravity="center"
+		   	   android:textSize="30px"
+		       android:textColor="#ffffff"/>
+  	       <TextView android:id="@+id/luxian"
+  	           android:layout_width="0dp"
+  	           android:layout_weight="1"
+  	           android:layout_height="150dp"
+  	           android:background="#B0C4DE"
+  	           android:text="路线"
+  	           android:gravity="center"
+		   	   android:textSize="30px"
+		       android:textColor="#ffffff"/>
+  	   </LinearLayout>
+  	   <LinearLayout android:id="@+id/gonglue_tianqi_jiudian"
+	      android:layout_width="match_parent"
+	      android:layout_height="150dp"
+	      android:paddingLeft="5dp" 
+	      android:paddingRight="5dp">
+	        <TextView android:id="@+id/gonglue" 
+			   android:layout_weight="1"
+			   android:layout_width="0dp"
+			   android:layout_height="150dp"
+			   android:background="#C0FF3E"
+			   android:text="攻略"
+			   android:gravity="center"
+			   android:textSize="25sp"
+			   android:textColor="#ffffff"
+			   android:layout_marginRight="5dp"/>
+	        <LinearLayout
+	            android:id="@+id/tianqi_jiudian"
+	            android:layout_weight="1"
+	            android:layout_width="0dp"
+	            android:layout_height="150dp"
+	            android:orientation="vertical">
+	            <TextView android:id="@+id/tianqi"
+	                android:layout_width="match_parent"
+	                android:layout_height="72dp"
+	                android:background="#9F79EE"
+	                android:layout_marginBottom="5dp"
+	                android:text="天气"
+	                android:textColor="#ffffff"
+	                android:gravity="center"
+	                android:textSize="20sp"/>
+	             <TextView android:id="@+id/jiudian"
+	                android:layout_width="match_parent"
+	                android:layout_height="72dp"
+	                android:background="#8B0A50"
+	                android:gravity="center"
+	                android:text="酒店"
+	                android:textColor="#ffffff"
+	                android:textSize="20sp"/>
+	        </LinearLayout>
+ 	 	</LinearLayout>
+  		<LinearLayout android:layout_width="match_parent"
+	      android:layout_height="wrap_content" 
+	      android:orientation="horizontal"
+	      android:id="@+id/footer" android:padding="5dp">
+	      <TextView android:id="@+id/shouye" 
+			   android:layout_weight="1"
+			   android:layout_width="0dp"
+			   android:layout_height="wrap_content"
+			   android:background="#20B2AA"
+			   android:text="首页"
+			   android:gravity="center"
+			   android:textSize="20sp"
+			   android:textColor="#ffffff"
+			   android:layout_marginRight="5dp"/>
+	      <TextView android:id="@+id/youji" 
+			   android:layout_weight="1"
+			   android:layout_width="0dp"
+			   android:layout_height="wrap_content"
+			   android:background="#8FBC8F"
+			   android:text="游记"
+			   android:gravity="center"
+			   android:textSize="20sp"
+			   android:textColor="#ffffff"
+			   android:layout_marginRight="5dp"/>
+	      <TextView android:id="@+id/meishi" 
+			   android:layout_weight="1"
+			   android:layout_width="0dp"
+			   android:layout_height="wrap_content"
+			   android:background="#EEC900"
+			   android:text="美食"
+			   android:gravity="center"
+			   android:textSize="20sp"
+			   android:textColor="#ffffff"
+			   android:layout_marginRight="5dp"/>
+	      <TextView android:id="@+id/gouwu" 
+			   android:layout_weight="1"
+			   android:layout_width="0dp"
+			   android:layout_height="wrap_content"
+			   android:background="#CD5555"
+			   android:text="购物"
+			   android:gravity="center"
+			   android:textSize="20sp"
+			   android:textColor="#ffffff"
+			   android:layout_marginRight="5dp"/>
+ 	 </LinearLayout>
+    </LinearLayout>
+</ScrollView>

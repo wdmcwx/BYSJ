@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal" >
+    <TextView android:id="@+id/name_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+	<TextView android:id="@+id/pwd_share"
+	     android:layout_marginTop="8px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+	<EditText android:id="@+id/ed_share"
+	     android:layout_width="match_parent"
+	     android:layout_height="0px"
+	     android:layout_weight="1"
+	     android:hint="输入分享内容"
+	     android:gravity="top|left"/>
+	<TextView android:id="@+id/article_info"
+	     android:layout_marginTop="8px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="服务器返回信息"/>
+	<Button android:id="@+id/save_btn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="保存"/>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center">
+    <Button android:id="@+id/update_gonglue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更新攻略"
+        android:layout_marginBottom="8px"/>
+	<Button android:id="@+id/update_jingdian"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="更新景点"
+	         android:layout_marginBottom="8px"/>
+	<Button android:id="@+id/update_jiudian"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="更新酒店"
+	         android:layout_marginBottom="8px"/>
+	<Button android:id="@+id/update_youji"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="更新游记"
+	         android:layout_marginBottom="8px"/>
+	<Button android:id="@+id/update_meishi"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="更新美食"
+	         android:layout_marginBottom="8px"/>
+	<Button android:id="@+id/update_gouwu"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="更新购物"
+	         android:layout_marginBottom="8px"/>
+</LinearLayout>
