@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:paddingLeft="15px"
+    android:paddingRight="15px">
+   <LinearLayout android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/fir_ly"
+       android:orientation="vertical">
+       <LinearLayout android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/firA_ly"
+       android:orientation="horizontal">
+       		<ImageView android:id="@+id/img"
+       		    android:layout_width="190px"
+       		    android:layout_height="180px"/>
+       		
+	       		<LinearLayout android:layout_width="wrap_content"
+			       android:layout_height="wrap_content"
+			       android:orientation="vertical"
+			       android:layout_gravity="center"
+			       android:gravity="center"
+			       android:paddingLeft="10px">	   
+			           <TextView android:layout_width="wrap_content"
+			               android:layout_height="wrap_content"
+			               android:id="@+id/name5"
+			               android:text="世界之窗"
+			               android:textSize="25px"/>
+			           <TextView android:layout_width="wrap_content"
+			               android:layout_height="wrap_content"
+			               android:id="@+id/addr"
+			               android:text="广东省深圳市南山区深南大道9037号"/>
+			           		           
+	  		  </LinearLayout>  			 
+  	   </LinearLayout>
+   </LinearLayout>
+   <TextView android:layout_width="wrap_content"
+			               android:layout_height="wrap_content"
+			               android:id="@+id/time"/>	
+   <TextView android:layout_width="wrap_content"
+			               android:layout_height="wrap_content"
+			               android:id="@+id/tese"
+			               android:text="荟萃世界几千年人类文明等130多个景点为您一次呈现,全新动感项目体"/>
+	<TextView android:id="@+id/tickey1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="日场成人票【不出园日夜场通玩】"/>
+	<TextView android:id="@+id/tickey2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="日场成人票【不出园日夜场通玩】"/>
+</LinearLayout>

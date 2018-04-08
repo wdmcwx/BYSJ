@@ -1,0 +1,128 @@
+package com.youji;
+
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.List;
+import java.util.Map;
+
+import com.example.wdm.R;
+import com.example.wdm.R.id;
+import com.example.wdm.R.layout;
+import com.gonglue.MyAdapter_gonglue.Info;
+
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class MyAdapter_youji extends BaseAdapter{
+	 private List<Map<String, Object>> data;
+	    private LayoutInflater layoutInflater;
+	    private Context context;
+
+	    public MyAdapter_youji(Context context, List<Map<String, Object>> data) {
+	    //传入的data，就是我们要在listview中显示的信息
+	        this.context = context;
+	        this.data = data;
+	        this.layoutInflater = LayoutInflater.from(context);
+	    }
+	    //这里定义了一个类，用来表示一个item里面包含的东西，像我的就是一个imageView和三个TextView，按自己需要来
+	    public class Info {
+	        public ImageView imgs;
+	        public TextView titles;
+	        public TextView chapters;
+	        public TextView summarys;
+	        public TextView anthor_times;
+	    }
+	    //所有要返回的数量，Id，信息等，都在data里面，从data里面取就好
+	    @Override
+	    public int getCount() {
+	        // TODO Auto-generated method stub
+	        return data.size();
+	    }
+
+	    @Override
+	    public Object getItem(int position) {
+	        // TODO Auto-generated method stub
+	        return data.get(position);
+	    }
+
+	    @Override
+	    public long getItemId(int position) {
+	        // TODO Auto-generated method stub
+	        return position;
+	    }
+	    //跟actvity中的oncreat()差不多，目的就是给item布局中的各个控件对应好，并添加数据
+	    @Override
+	    public View getView(int position, View convertView, ViewGroup parent) {
+	        // TODO Auto-generated method stub
+	        Info info = new Info();
+	        convertView = layoutInflater.inflate(R.layout.youji_listview, null);
+	        
+	        info.imgs = (ImageView) convertView.findViewById(R.id.youji_img);
+	        info.titles= (TextView) convertView
+	                .findViewById(R.id.youji_title);
+	        info.anthor_times = (TextView) convertView
+	                .findViewById(R.id.youji_anthor_times);
+	        info.chapters = (TextView) convertView
+	                .findViewById(R.id.chapters);
+	        info.summarys = (TextView) convertView
+	                .findViewById(R.id.summarys);
+
+	        //设置数据
+	  //      info.img.setImageResource((Integer) data.get(position).get("imgs"));
+	        info.titles.setText((String) data.get(position).get(
+	                "titles"));
+	        info.chapters.setText((String) data.get(position).get(
+	                "chapters"));
+	        info.summarys.setText((String) data.get(position)
+	                .get("summarys"));
+	        info.anthor_times.setText((String) data.get(position)
+	                .get("anthor_times"));
+	        
+//	        //得到可用的图片
+	        Bitmap bitmap = getHttpBitmap( (String) data.get(position).get("imgs"));	      
+	        //显示
+	        info.imgs.setImageBitmap(bitmap);
+	        
+	        return convertView;
+	    }
+	    
+	    
+	// * 获取网落图片资源 
+		private Bitmap getHttpBitmap(String url) {
+			// TODO 自动生成的方法存根
+			 URL myFileURL;
+		        Bitmap bitmap=null;
+		        try{
+		            myFileURL = new URL(url);
+		            //获得连接
+		            HttpURLConnection conn=(HttpURLConnection)myFileURL.openConnection();
+		            //设置超时时间为6000毫秒，conn.setConnectionTiem(0);表示没有时间限制
+		            conn.setConnectTimeout(6000);
+		            //连接设置获得数据流
+		            conn.setDoInput(true);
+		            //不使用缓存
+		            conn.setUseCaches(false);
+		            //这句可有可无，没有影响
+		            //conn.connect();
+		            //得到数据流
+		            InputStream is = conn.getInputStream();
+		            //解析得到图片
+		            bitmap = BitmapFactory.decodeStream(is);
+		            //关闭数据流
+		            is.close();
+		        }catch(Exception e){
+		            e.printStackTrace();
+		        }
+		         
+		        return bitmap;
+		         
+		}
+}

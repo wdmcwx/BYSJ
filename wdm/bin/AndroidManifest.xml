@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wdm"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="14" />
+    <supports-screens android:largeScreens="true"
+		android:normalScreens="true"
+		android:smallScreens="true"
+		android:resizeable="true"
+		android:anyDensity="true"/>
+	<!-- 添加屏幕支持 -->
+	
+	<!--使用网络功能所需权限  -->
+	<uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+	<uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+	<uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+	<uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<!-- SDK离线地图和cache功能需要读写外部存储器 -->  
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<!-- 获取设置信息和详情页直接拨打电话需要以下权限  -->  
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>  
+	<uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+	
+    <application
+        android:allowBackup="true"  
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+         >
+        <meta-data  
+        android:name="com.baidu.lbsapi.API_KEY"  
+        android:value="hzlDFULrIYETUcIMEZHhLzWNWNEdmMeB" />  
+       
+        <activity android:name="com.map.MapActivity"
+            android:screenOrientation="sensor"
+			android:configChanges="orientation|keyboardHidden">
+        </activity>
+      
+        <activity android:name="com.jingdian.Jingdian"
+            android:screenOrientation="sensor"
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        </activity>
+        <activity android:name="com.gonglue.gonglueActivity"
+            android:screenOrientation="sensor"
+			android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        </activity>
+         <activity android:name="com.jiudian.jiudian"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor"
+			android:configChanges="orientation|keyboardHidden"
+			>
+        </activity>
+         <activity android:name="com.gouwu.gouwu"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+			android:configChanges="orientation|keyboardHidden">
+        </activity>
+         <activity android:name="com.meishi.meishi"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+			android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+         <activity android:name="weather.WeatherActivity"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+			android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <activity android:name=".Art"
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+			android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <activity android:name=".mapTest"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor"
+			android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <activity android:name="com.map.MapTest"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor"
+			>
+        </activity>
+        <activity android:name="com.jingdian.jingdian_detial"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor"
+			>
+        </activity>
+        <activity android:name="com.gonglue.gonglue_detiial"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor"
+			>
+        </activity>
+        <activity android:name="com.youji.youji_detail"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor"
+			>
+        </activity>
+        <activity android:name="com.gouwu.gouwu_detail"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor"
+			>
+        </activity>
+         <activity android:name="com.meishi.meishi_detail"
+             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor"
+			>
+        </activity>
+        <activity android:name="com.jiudian.jiudian_detail"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor"
+			>
+        </activity>
+         <activity android:name="com.example.wdm.lunbo"
+             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor"
+			>
+        </activity>
+        <activity android:name=".SearchActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name=".TabActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name=".SouSuoActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name=".SplashActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="nodeBook.NotebookMain"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="nodeBook.NoteBookSecond"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="com.example.wdm.gonglue_demo"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="com.example.wdm.testdemo"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="share.login"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="share.register"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="share.share_activity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="httpUtil.Login"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="share.write_share"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="share.selectActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+         <activity android:name="share.article_detail"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        
+         <activity android:name="com.gonglue.test"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="com.gonglue.GonglueXMLParse"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="com.jingdian.jingdian_search"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="com.jiudian.jiudian_search"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        
+        <activity android:name="com.youji.youji_search"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="com.youji.meishi_search"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="com.gouwu.gouwu_search"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+		<activity android:name="com.example.wdm.updateData"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+
+        <activity android:name="com.gouwu.gouwuUpdate"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+		
+       <activity android:name="com.youji.youjiUpdate"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        
+       <activity android:name="com.meishi.meishiUdate"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity android:name="com.example.wdm.UserInfo"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:screenOrientation="sensor">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="sensor"
+            android:theme="@android:style/Theme.NoTitleBar"
+			>
+			<!-- 注意添加转屏的相关设置 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+    </application>
+</manifest>
